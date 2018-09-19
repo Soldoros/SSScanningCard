@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DCEBF963D7DE22E4AD0CFA9 /* Pods_SSScanningCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581969B6B895CA7ABDFCAA9F /* Pods_SSScanningCard.framework */; };
+		AF2734F82151E45000AEBEFA /* SSScanningController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2734F72151E45000AEBEFA /* SSScanningController.m */; };
+		AF2734FF2151F0F600AEBEFA /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2734FA2151F0F600AEBEFA /* libexidcardios.a */; };
+		AF2735002151F0F600AEBEFA /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = AF2734FC2151F0F600AEBEFA /* zocr0.lib */; };
+		AF2735032152008900AEBEFA /* SSCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2735022152008900AEBEFA /* SSCardModel.m */; };
+		AF2735062152236300AEBEFA /* LHSIDCardScaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2735042152236300AEBEFA /* LHSIDCardScaningView.m */; };
+		AFC8419021450DD300151D6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC8418F21450DD300151D6B /* AppDelegate.m */; };
+		AFC8419321450DD300151D6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC8419221450DD300151D6B /* ViewController.m */; };
+		AFC8419621450DD300151D6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC8419421450DD300151D6B /* Main.storyboard */; };
+		AFC8419821450DD400151D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC8419721450DD400151D6B /* Assets.xcassets */; };
+		AFC8419B21450DD400151D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC8419921450DD400151D6B /* LaunchScreen.storyboard */; };
+		AFC8419E21450DD400151D6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC8419D21450DD400151D6B /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		581969B6B895CA7ABDFCAA9F /* Pods_SSScanningCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSScanningCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DCDE7BE78AD96CC12C0083 /* Pods-SSScanningCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSScanningCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSScanningCard/Pods-SSScanningCard.release.xcconfig"; sourceTree = "<group>"; };
+		AF2734F62151E45000AEBEFA /* SSScanningController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSScanningController.h; sourceTree = "<group>"; };
+		AF2734F72151E45000AEBEFA /* SSScanningController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSScanningController.m; sourceTree = "<group>"; };
+		AF2734FA2151F0F600AEBEFA /* libexidcardios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexidcardios.a; sourceTree = "<group>"; };
+		AF2734FC2151F0F600AEBEFA /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		AF2734FD2151F0F600AEBEFA /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		AF2734FE2151F0F600AEBEFA /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		AF2735012152008900AEBEFA /* SSCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCardModel.h; sourceTree = "<group>"; };
+		AF2735022152008900AEBEFA /* SSCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCardModel.m; sourceTree = "<group>"; };
+		AF2735042152236300AEBEFA /* LHSIDCardScaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSIDCardScaningView.m; sourceTree = "<group>"; };
+		AF2735052152236300AEBEFA /* LHSIDCardScaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSIDCardScaningView.h; sourceTree = "<group>"; };
+		AFC8418B21450DD300151D6B /* SSScanningCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSScanningCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC8418E21450DD300151D6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AFC8418F21450DD300151D6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFC8419121450DD300151D6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AFC8419221450DD300151D6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AFC8419521450DD300151D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFC8419721450DD400151D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFC8419A21450DD400151D6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFC8419C21450DD400151D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC8419D21450DD400151D6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE6E5C838B823EF2EB6E8BDA /* Pods-SSScanningCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSScanningCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSScanningCard/Pods-SSScanningCard.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFC8418821450DD300151D6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCEBF963D7DE22E4AD0CFA9 /* Pods_SSScanningCard.framework in Frameworks */,
+				AF2734FF2151F0F600AEBEFA /* libexidcardios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF2734F92151F0F600AEBEFA /* libexidcard */ = {
+			isa = PBXGroup;
+			children = (
+				AF2734FA2151F0F600AEBEFA /* libexidcardios.a */,
+				AF2734FB2151F0F600AEBEFA /* dicts */,
+				AF2734FD2151F0F600AEBEFA /* commondef.h */,
+				AF2734FE2151F0F600AEBEFA /* excards.h */,
+			);
+			path = libexidcard;
+			sourceTree = "<group>";
+		};
+		AF2734FB2151F0F600AEBEFA /* dicts */ = {
+			isa = PBXGroup;
+			children = (
+				AF2734FC2151F0F600AEBEFA /* zocr0.lib */,
+			);
+			path = dicts;
+			sourceTree = "<group>";
+		};
+		AFC8418221450DD300151D6B = {
+			isa = PBXGroup;
+			children = (
+				AFC8418D21450DD300151D6B /* SSScanningCard */,
+				AFC8418C21450DD300151D6B /* Products */,
+				ED300F1D7F7DFB2A78D0C27D /* Pods */,
+				DE34C0B8C54F15D4006B3C09 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFC8418C21450DD300151D6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFC8418B21450DD300151D6B /* SSScanningCard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFC8418D21450DD300151D6B /* SSScanningCard */ = {
+			isa = PBXGroup;
+			children = (
+				AFC8418E21450DD300151D6B /* AppDelegate.h */,
+				AFC8418F21450DD300151D6B /* AppDelegate.m */,
+				AFC8419121450DD300151D6B /* ViewController.h */,
+				AFC8419221450DD300151D6B /* ViewController.m */,
+				AF2734F62151E45000AEBEFA /* SSScanningController.h */,
+				AF2734F72151E45000AEBEFA /* SSScanningController.m */,
+				AF2735012152008900AEBEFA /* SSCardModel.h */,
+				AF2735022152008900AEBEFA /* SSCardModel.m */,
+				AF2735052152236300AEBEFA /* LHSIDCardScaningView.h */,
+				AF2735042152236300AEBEFA /* LHSIDCardScaningView.m */,
+				AFC8419421450DD300151D6B /* Main.storyboard */,
+				AFC8419721450DD400151D6B /* Assets.xcassets */,
+				AFC8419921450DD400151D6B /* LaunchScreen.storyboard */,
+				AFC8419C21450DD400151D6B /* Info.plist */,
+				AFC8419D21450DD400151D6B /* main.m */,
+			);
+			path = SSScanningCard;
+			sourceTree = "<group>";
+		};
+		DE34C0B8C54F15D4006B3C09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2734F92151F0F600AEBEFA /* libexidcard */,
+				581969B6B895CA7ABDFCAA9F /* Pods_SSScanningCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED300F1D7F7DFB2A78D0C27D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE6E5C838B823EF2EB6E8BDA /* Pods-SSScanningCard.debug.xcconfig */,
+				92DCDE7BE78AD96CC12C0083 /* Pods-SSScanningCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFC8418A21450DD300151D6B /* SSScanningCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFC841A121450DD400151D6B /* Build configuration list for PBXNativeTarget "SSScanningCard" */;
+			buildPhases = (
+				388A6AA2289002496005D8A7 /* [CP] Check Pods Manifest.lock */,
+				AFC8418721450DD300151D6B /* Sources */,
+				AFC8418821450DD300151D6B /* Frameworks */,
+				AFC8418921450DD300151D6B /* Resources */,
+				F8B0D620857E993061E0BE89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSScanningCard;
+			productName = SSScanningCard;
+			productReference = AFC8418B21450DD300151D6B /* SSScanningCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFC8418321450DD300151D6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = soldoros;
+				TargetAttributes = {
+					AFC8418A21450DD300151D6B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AFC8418621450DD300151D6B /* Build configuration list for PBXProject "SSScanningCard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFC8418221450DD300151D6B;
+			productRefGroup = AFC8418C21450DD300151D6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFC8418A21450DD300151D6B /* SSScanningCard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFC8418921450DD300151D6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2735002151F0F600AEBEFA /* zocr0.lib in Resources */,
+				AFC8419B21450DD400151D6B /* LaunchScreen.storyboard in Resources */,
+				AFC8419821450DD400151D6B /* Assets.xcassets in Resources */,
+				AFC8419621450DD300151D6B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		388A6AA2289002496005D8A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSScanningCard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B0D620857E993061E0BE89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SSScanningCard/Pods-SSScanningCard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SSScanningCard/Pods-SSScanningCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFC8418721450DD300151D6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2734F82151E45000AEBEFA /* SSScanningController.m in Sources */,
+				AFC8419321450DD300151D6B /* ViewController.m in Sources */,
+				AFC8419E21450DD400151D6B /* main.m in Sources */,
+				AF2735062152236300AEBEFA /* LHSIDCardScaningView.m in Sources */,
+				AF2735032152008900AEBEFA /* SSCardModel.m in Sources */,
+				AFC8419021450DD300151D6B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AFC8419421450DD300151D6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC8419521450DD300151D6B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFC8419921450DD400151D6B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFC8419A21450DD400151D6B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFC8419F21450DD400151D6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AFC841A021450DD400151D6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFC841A221450DD400151D6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6E5C838B823EF2EB6E8BDA /* Pods-SSScanningCard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQSJ28CZ2Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SSScanningCard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libexidcard",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengsheng.SSScanningCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AFC841A321450DD400151D6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DCDE7BE78AD96CC12C0083 /* Pods-SSScanningCard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQSJ28CZ2Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SSScanningCard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libexidcard",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chengsheng.SSScanningCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFC8418621450DD300151D6B /* Build configuration list for PBXProject "SSScanningCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC8419F21450DD400151D6B /* Debug */,
+				AFC841A021450DD400151D6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFC841A121450DD400151D6B /* Build configuration list for PBXNativeTarget "SSScanningCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFC841A221450DD400151D6B /* Debug */,
+				AFC841A321450DD400151D6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFC8418321450DD300151D6B /* Project object */;
+}
