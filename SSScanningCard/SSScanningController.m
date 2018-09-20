@@ -81,7 +81,7 @@
     self.navigationItem.rightBarButtonItem = refreshItem;
     
     
-    //初始化rect
+    //初始化ret
     const char *thePath = [[[NSBundle mainBundle] resourcePath] UTF8String];
     int ret = EXCARDS_Init(thePath);
     if (ret != 0) {
@@ -134,13 +134,13 @@
     
     
     //执行输入设备和输出设备之间的数据传递 有很多Device的input和很多类型的Output，都通过CaptureSession来控制进行传输，即：CaputureDevice适配AVCaptureInput，通过Session来输入到AVCaptureOutput中，这样就达到了从设备到文件持久传输的目的（如从相机设备采集图像到UIImage中）
-    _session = [[AVCaptureSession alloc] init];
-    //设置分辨率 高清
-    _session.sessionPreset = AVCaptureSessionPresetHigh;
-    
     NSError *error = nil;
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
     
+    _session = [[AVCaptureSession alloc] init];
+    //设置分辨率 高清
+    _session.sessionPreset = AVCaptureSessionPresetHigh;
+
     if (error) NSLog(@"没有摄像头");
     else{
         if ([_session canAddInput:input]) {
@@ -285,8 +285,11 @@
 #pragma mark - 身份证信息识别
 - (void)getImageBufferRef:(CVImageBufferRef)imageBufferRef {
     
+    //读取CVImageBufferRef对象
     CVBufferRetain(imageBufferRef);
  
+    
+//    解码后的数据并不能直接给CPU访问，需要先用CVPixelBufferLockBaseAddress()锁定地址才能从主存访问，否则调用CVPixelBufferGetBaseAddressOfPlane等函数则返回NULL或无效值。然而，用CVImageBuffer -> CIImage -> UIImage则无需显式调用锁定基地址函数。
     if (CVPixelBufferLockBaseAddress(imageBufferRef, 0) == kCVReturnSuccess) {
         
         size_t width= CVPixelBufferGetWidth(imageBufferRef);
@@ -294,6 +297,11 @@
         
         NSLog(@"%zu",width);
         NSLog(@"%zu",height);
+        
+//        CVPixelBufferIsPlanar可得到像素的存储方式是Planar或Chunky。若是Planar，则通过CVPixelBufferGetPlaneCount获取YUV Plane数量。通常是两个Plane，Y为一个Plane，UV由VTDecompressionSessionCreate创建解码会话时通过destinationImageBufferAttributes指定需要的像素格式（可不同于视频源像素格式）决定是否同属一个Plane，每个Plane可当作表格按行列处理，像素是行顺序填充的。下面以Planar Buffer存储方式作说明。
+//
+//        CVPixelBufferGetPlaneCount得到像素缓冲区平面数量，然后由CVPixelBufferGetBaseAddressOfPlane(索引)得到相应的通道，一般是Y、U、V通道存储地址，UV是否分开由解码会话指定，如前面所述。而CVPixelBufferGetBaseAddress返回的对于Planar Buffer则是指向PlanarComponentInfo结构体的指针，
+    
         
         CVPlanarPixelBufferInfo_YCbCrBiPlanar *planar = CVPixelBufferGetBaseAddress(imageBufferRef);
         size_t offset = NSSwapBigIntToHost(planar->componentInfoY.offset);
@@ -314,6 +322,7 @@
             NSLog(@"ret=[%d]", ret);
         } else {
             NSLog(@"ret=[%d]", ret);
+            
             
             // 播放一下“拍照”的声音，模拟拍照
             AudioServicesPlaySystemSound(1108);
@@ -367,14 +376,9 @@
             
             // 读取到身份证信息 并返回
             if (_model){
-                NSLog(@"\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",_model.name,_model.gender,_model.nation,_model.address,_model.num,_model.issue,_model.valid);
-               
-                
+
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    if(self.delegate && [self.delegate respondsToSelector:@selector(SSScanningControllerPopController:)]){
-                        [self.delegate SSScanningControllerPopController:self.model];
-                    }
+                
                     ViewController *vc = [ViewController new];
                     vc.model = self.model;
                     [self.navigationController pushViewController:vc animated:YES];
