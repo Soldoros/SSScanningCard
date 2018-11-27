@@ -1,0 +1,2 @@
+# SSScanningCard
+ios基于AVFoundation的身份证识别
